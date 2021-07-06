@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-06T11:06:18.113Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="0resfAWk3TFDj9x6lPgC" version="14.8.4" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2021-07-06T11:31:31.209Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="gaQQfhdNAi57XlrY8_Sp" version="14.8.4" type="github" pages="9">
   <diagram name="互斥锁" id="5d7acffa-a066-3a61-03fe-96351882024d">
     <mxGraphModel dx="2514" dy="1268" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3000" pageHeight="3000" background="#ffffff" math="0" shadow="1">
       <root>
@@ -424,13 +424,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="pSSy6d7iewiJqJxX9ky8-1" value="释放读锁" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontSize=30;fontColor=#000000;" vertex="1" parent="4Kn29drxNQvWNtrvnITc-1">
-          <mxGeometry x="4513" y="59" width="137" height="31" as="geometry" />
+          <mxGeometry x="4497.5" y="40" width="137" height="31" as="geometry" />
         </mxCell>
         <mxCell id="pSSy6d7iewiJqJxX9ky8-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;fontColor=#000000;" edge="1" parent="4Kn29drxNQvWNtrvnITc-1" source="pSSy6d7iewiJqJxX9ky8-3" target="pSSy6d7iewiJqJxX9ky8-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="pSSy6d7iewiJqJxX9ky8-3" value="释放写锁" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontSize=18;fontColor=#000000;" vertex="1" parent="4Kn29drxNQvWNtrvnITc-1">
-          <mxGeometry x="6068.5" y="59" width="106" height="27" as="geometry" />
+        <mxCell id="pSSy6d7iewiJqJxX9ky8-3" value="释放写锁" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontSize=30;fontColor=#000000;" vertex="1" parent="4Kn29drxNQvWNtrvnITc-1">
+          <mxGeometry x="6055.75" y="40" width="131.5" height="21" as="geometry" />
         </mxCell>
         <mxCell id="pSSy6d7iewiJqJxX9ky8-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.48;entryY=-0.005;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=18;fontColor=#000000;" edge="1" parent="4Kn29drxNQvWNtrvnITc-1" source="pSSy6d7iewiJqJxX9ky8-5" target="pSSy6d7iewiJqJxX9ky8-20">
           <mxGeometry relative="1" as="geometry" />
