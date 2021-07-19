@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-19T16:19:37.370Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="WnnlJNqqrDjg2vkhSwfr" version="14.8.6" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2021-07-19T16:29:25.828Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="Y9DkrBUQv6JsqboSmefX" version="14.8.6" type="github" pages="7">
   <diagram id="J9Tmd6Zy7u8FUA9VIpDE" name="模板">
     <mxGraphModel dx="1554" dy="969" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="8500" pageHeight="20000" math="0" shadow="0">
       <root>
@@ -1086,14 +1086,17 @@
         <mxCell id="JXCh8Y8D3VYjSZMD6yoN-92" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=14;fontColor=#000000;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="Sfc9aITo4xTI0m3XfOoi-1" source="JXCh8Y8D3VYjSZMD6yoN-91" target="JXCh8Y8D3VYjSZMD6yoN-85">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="JXCh8Y8D3VYjSZMD6yoN-91" value="写锁标志位" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=0;labelBackgroundColor=none;sketch=1;fontFamily=Helvetica;fontSize=14;" vertex="1" parent="Sfc9aITo4xTI0m3XfOoi-1">
+        <mxCell id="JXCh8Y8D3VYjSZMD6yoN-91" value="写锁状态位" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=0;labelBackgroundColor=none;sketch=1;fontFamily=Helvetica;fontSize=14;" vertex="1" parent="Sfc9aITo4xTI0m3XfOoi-1">
           <mxGeometry x="5738.75" y="281.5" width="87.5" height="38.5" as="geometry" />
         </mxCell>
         <mxCell id="JXCh8Y8D3VYjSZMD6yoN-93" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;shadow=1;glass=0;labelBackgroundColor=none;sketch=1;fontFamily=Helvetica;fontSize=14;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;rotation=-90;" vertex="1" parent="Sfc9aITo4xTI0m3XfOoi-1">
           <mxGeometry x="6091.25" y="16.25" width="20" height="482.5" as="geometry" />
         </mxCell>
-        <mxCell id="JXCh8Y8D3VYjSZMD6yoN-94" value="读锁标志位" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=0;labelBackgroundColor=none;sketch=1;fontFamily=Helvetica;fontSize=14;" vertex="1" parent="Sfc9aITo4xTI0m3XfOoi-1">
+        <mxCell id="JXCh8Y8D3VYjSZMD6yoN-94" value="读锁状态位" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;glass=0;labelBackgroundColor=none;sketch=1;fontFamily=Helvetica;fontSize=14;" vertex="1" parent="Sfc9aITo4xTI0m3XfOoi-1">
           <mxGeometry x="6070" y="280" width="79" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JXCh8Y8D3VYjSZMD6yoN-95" value="&lt;p style=&quot;box-sizing: border-box ; margin-top: 0px ; margin-bottom: 1.25rem ; font-size: 14px&quot;&gt;（1）StampedLock中state是long类型，占64位，它被划为了三个部分来使用。低7位作为读锁标志位，可以由多个线程共享，每有一个线程申请读锁成功，低7位就加1。第8位是写锁位，由线程独占。&lt;br style=&quot;box-sizing: border-box ; font-size: 14px&quot;&gt;其余位是stamp位，用来记录写锁状态的变化(版本号)，每使用一次写锁，stamp位就会加1。&lt;span&gt;同时如果读锁数量超过了126之后，超出的次数使用readerOverflow来进行计数。&lt;/span&gt;&lt;/p&gt;&lt;span&gt;（2）读锁是可以被多个线程获取的，如果同一时间有多个线程来获取读锁，第一个未获取读锁的线程会被加入到链表中，而后面的的读线程会被加入到cowait栈中&lt;/span&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;shadow=0;glass=0;labelBackgroundColor=none;sketch=1;fontFamily=Helvetica;fontSize=14;align=left;fillColor=#ffe6cc;" vertex="1" parent="Sfc9aITo4xTI0m3XfOoi-1">
+          <mxGeometry x="5200" y="369.5" width="789" height="219" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
