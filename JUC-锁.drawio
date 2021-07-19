@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-19T07:52:00.061Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="9mL-JARDszibIfpfKEKs" version="14.8.6" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2021-07-19T10:55:45.259Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="zaGeo85hgwwBHSKZG4Ol" version="14.8.6" type="github" pages="7">
   <diagram id="J9Tmd6Zy7u8FUA9VIpDE" name="模板">
     <mxGraphModel dx="1554" dy="969" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="8500" pageHeight="20000" math="0" shadow="0">
       <root>
@@ -1019,6 +1019,12 @@
         </mxCell>
         <mxCell id="JXCh8Y8D3VYjSZMD6yoN-57" value="rnode6" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;shadow=1;glass=0;labelBackgroundColor=none;sketch=1;fontSize=16;strokeColor=#b85450;fillColor=#f8cecc;gradientColor=#ffffff;fontFamily=Lucida Console;" vertex="1" parent="Sfc9aITo4xTI0m3XfOoi-1">
           <mxGeometry x="5100" y="390" width="128" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="JXCh8Y8D3VYjSZMD6yoN-67" value="连续的读线程节点构成一条链表，逆序排列，这个链表也称为读线程栈，栈节点的prev指针指向" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;shadow=1;glass=0;labelBackgroundColor=none;sketch=1;fontFamily=Lucida Console;fontSize=16;strokeColor=#82b366;fillColor=#d5e8d4;align=left;position2=0;size=30;position=0.19;gradientColor=#ffffff;" vertex="1" parent="Sfc9aITo4xTI0m3XfOoi-1">
+          <mxGeometry x="4690" y="34" width="310" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="JXCh8Y8D3VYjSZMD6yoN-68" value="&lt;span style=&quot;color: rgb(33 , 37 , 41) ; font-size: 14px ; background-color: rgb(255 , 255 , 255)&quot;&gt;读锁是可以被多个线程获取的，如果同一时间有多个线程来获取读锁却获取不到时，&lt;/span&gt;&lt;span style=&quot;font-size: 14px ; background-color: rgb(255 , 255 , 255)&quot;&gt;&lt;font color=&quot;#ff0000&quot;&gt;这个时候第一个获取读锁的线程会被加入到链表中，而后面的的读线程会被加入到cowait栈中&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33 , 37 , 41) ; font-size: 14px ; background-color: rgb(255 , 255 , 255)&quot;&gt;,&lt;/span&gt;&lt;br style=&quot;box-sizing: border-box ; color: rgb(33 , 37 , 41) ; font-size: 14px ; background-color: rgb(255 , 255 , 255)&quot;&gt;&lt;span style=&quot;color: rgb(33 , 37 , 41) ; font-size: 14px ; background-color: rgb(255 , 255 , 255)&quot;&gt;可以认为cowait是一条副链。&lt;/span&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.roundRectCallout;dx=30;dy=15;size=5;boundedLbl=1;shadow=0;labelBackgroundColor=none;sketch=1;fontSize=14;align=left;strokeColor=#d79b00;fillStyle=solid;" vertex="1" parent="Sfc9aITo4xTI0m3XfOoi-1">
+          <mxGeometry x="4790" y="260" width="220" height="340" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
